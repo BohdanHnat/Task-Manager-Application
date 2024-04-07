@@ -24,9 +24,49 @@ Installation requirements:
 * Python module **tkcalendar**, that provides the **DateEntry** widget for **Tkinter**, is also required. To install this, within your terminal enter `pip install tkcalendar `.
 
 ## Task Manager Application Preview
-1.	Layout and the hierarchy of tasks preview:
+1. Layout and the hierarchy of tasks preview:
 
 ![Image Alt text](Images/image_1.JPG)
 
 ![Image Alt text](Images/image_2.JPG)
+
+2. Calendar opening and preview:
+* 2.1.	Click on Calendar icon.
+* 2.2.	After window popped up – select date. It will close immediately afterwards. 
+
+3. Add Task flow and preview:  
+* 3.1.	Enter new task in task entry field.
+* 3.2.	Click on Calendar icon to open pop-up Calendar window. Select deadline.
+* 3.3.	Press `ADD Task`
+* 3.4.	The added task will appear displayed in the Treeview below:
+
+4. Add Subtask flow and preview:  
+* 4.1.	Enter Subtask in task entry field.
+* 4.2.	Click on Calendar icon to open pop-up Calendar window. Select deadline.
+* 4.3.	Select Task from Treeview below to add Subtask to.
+* 4.4.	Press `ADD Subtask`.
+* 4.5.	Added Subtask will appear displayed in Treeview, below parent task in hierarchy.
+* 4.6.	Click on `+` button next to parent Task to reveal subtasks added to it.
+
+5. Change Deadline flow and preview:  
+* 5.1.	Select Task/Subtask from the Treeview.
+* 5.2.	Click on Calendar icon to open pop-up Calendar window. Select new deadline.
+* 5.3.	Press `CHANGE Deadline` button
+
+6. Complete Task/Subtask flow and preview:  
+* 6.1.	Select Task/Subtask from the Treeview.
+* 6.2.	Press `COMPLETE` button.
+* 6.3.	If Task hasn't been completed yet, it`s status in Treeview will change from ‘In Progress‘ to ‘Done‘:
+
+7. Remove Task/Subtask flow and preview:
+* 7.1.	Select Task/Subtask from the Treeview.
+* 7.2.	Press `REMOVE` button.
+* 7.3.	Selected Task/Subtask will be removed from Treeview completely
+  
+8. Exit Application flow and preview:
+* 8.1. Press `Exit` button to close Application window and save added Tasks/Subtasks to separate file. 
+* 8.2. After launching the application, previously saved data will load and restore all previously added Tasks/Subtasks 
+
+9. Warnings 
+
 
