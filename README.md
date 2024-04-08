@@ -84,10 +84,16 @@ Installation requirements:
 * 7.2.	Press `REMOVE` button.
 * 7.3.	Selected Task/Subtask will be removed from Treeview completely
   
+![Image_13](Images/image_13.jpg)
+
+![Image_14](Images/image_14.JPG)
+  
 8. Exit Application flow and preview:
 * 8.1. Press `Exit` button to close Application window and save added Tasks/Subtasks to separate file. 
-* 8.2. After launching the application, previously saved data will load and restore all previously added Tasks/Subtasks 
+* 8.2. After launching the application, previously saved data will load and restore all previously added Tasks/Subtasks
 
-9. Warnings 
+![Image_15](Images/image_15.jpg)
+
+![Image_16](Images/image_16.JPG)
 
 
