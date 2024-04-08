@@ -26,13 +26,17 @@ Installation requirements:
 ## Task Manager Application Preview
 1. Layout and the hierarchy of tasks preview:
 
-![Image Alt text](Images/image_1.JPG)
+![Image_1](Images/image_1.JPG)
 
-![Image Alt text](Images/image_2.JPG)
+![Image_2](Images/image_2.JPG)
 
 2. Calendar opening and preview:
 * 2.1.	Click on Calendar icon.
-* 2.2.	After window popped up – select date. It will close immediately afterwards. 
+* 2.2.	After window popped up – select date. It will close immediately afterwards.
+
+![Image_3](Images/image_3.JPG)
+
+![Image_4](Images/image_4.jpg)
 
 3. Add Task flow and preview:  
 * 3.1.	Enter new task in task entry field.
