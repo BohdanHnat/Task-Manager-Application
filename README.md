@@ -44,9 +44,9 @@ Installation requirements:
 * 3.3.	Press `ADD Task`
 * 3.4.	The added task will appear displayed in the Treeview below:
 
-![Image_3](Images/image_5.jpg)
+![Image_5](Images/image_5.jpg)
 
-![Image_4](Images/image_6.JPG)
+![Image_6](Images/image_6.JPG)
 
 4. Add Subtask flow and preview:  
 * 4.1.	Enter Subtask in task entry field.
@@ -55,6 +55,10 @@ Installation requirements:
 * 4.4.	Press `ADD Subtask`.
 * 4.5.	Added Subtask will appear displayed in Treeview, below parent task in hierarchy.
 * 4.6.	Click on `+` button next to parent Task to reveal subtasks added to it.
+
+![Image_7](Images/image_7.jpg)
+
+![Image_8](Images/image_8.jpg)
 
 5. Change Deadline flow and preview:  
 * 5.1.	Select Task/Subtask from the Treeview.
