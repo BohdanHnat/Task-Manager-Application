@@ -64,6 +64,11 @@ Installation requirements:
 * 5.1.	Select Task/Subtask from the Treeview.
 * 5.2.	Click on Calendar icon to open pop-up Calendar window. Select new deadline.
 * 5.3.	Press `CHANGE Deadline` button
+* 5.4. Changed deadline will be displayed in Treeview
+
+![Image_9](Images/image_9.jpg)
+
+![Image_10](Images/image_10.JPG)
 
 6. Complete Task/Subtask flow and preview:  
 * 6.1.	Select Task/Subtask from the Treeview.
