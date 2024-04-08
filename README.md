@@ -26,7 +26,7 @@ Installation requirements:
 ## Task Manager Application Preview
 1. Layout and the hierarchy of tasks preview:
 
-![Image_1](Images/image_1.JPG)
+![Image_1](Images/image_1.jpg)
 
 ![Image_2](Images/image_2.JPG)
 
@@ -34,7 +34,7 @@ Installation requirements:
 * 2.1.	Click on Calendar icon.
 * 2.2.	After window popped up – select date. It will close immediately afterwards.
 
-![Image_3](Images/image_3.JPG)
+![Image_3](Images/image_3.jpg)
 
 ![Image_4](Images/image_4.jpg)
 
@@ -43,6 +43,10 @@ Installation requirements:
 * 3.2.	Click on Calendar icon to open pop-up Calendar window. Select deadline.
 * 3.3.	Press `ADD Task`
 * 3.4.	The added task will appear displayed in the Treeview below:
+
+![Image_3](Images/image_5.jpg)
+
+![Image_4](Images/image_6.JPG)
 
 4. Add Subtask flow and preview:  
 * 4.1.	Enter Subtask in task entry field.
