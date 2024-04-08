@@ -74,6 +74,10 @@ Installation requirements:
 * 6.1.	Select Task/Subtask from the Treeview.
 * 6.2.	Press `COMPLETE` button.
 * 6.3.	If Task hasn't been completed yet, it`s status in Treeview will change from ‘In Progress‘ to ‘Done‘:
+  
+![Image_11](Images/image_11.jpg)
+
+![Image_12](Images/image_12.JPG)
 
 7. Remove Task/Subtask flow and preview:
 * 7.1.	Select Task/Subtask from the Treeview.
