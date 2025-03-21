@@ -11,29 +11,39 @@ class Task():
         self.deadline = deadline
         self.completed = "In Progress"
         self.subtasks = {}
+    
     def complete_task_object(self):
         self.info = '\u0336'.join(self.info) + '\u0336'
         self.deadline = '\u0336'.join(self.deadline) + '\u0336'
         self.completed = "Done"
+    
     def complete_subtask(self, subtask_info):
         self.subtasks['\u0336'.join(subtask_info) + '\u0336'] = self.subtasks[subtask_info]
         del self.subtasks[subtask_info]
 
         self.subtasks['\u0336'.join(subtask_info) + '\u0336'].complete_task_object()
+    
     def add_subtask(self, subtask: "Task"):
         self.subtasks[subtask.return_fields()[0]] = subtask
+    
     def remove_subtask(self, subtask_info: str):
         del self.subtasks[subtask_info]
+    
     def change_task_deadline(self, new_deadline):
         self.deadline = new_deadline
+    
     def change_subtask_deadline(self, subtask_info: str, new_deadline):
         self.subtasks[subtask_info].change_task_deadline(new_deadline)
+    
     def return_fields(self) -> list:
         return [self.info, self.deadline, self.completed]
+    
     def return_subtasks(self) -> dict:
         return self.subtasks
+    
     def return_subtask_fields(self, subtask_info: str) -> list:
         return self.subtasks[subtask_info].return_fields()
+        
     def return_subtasks_as_dict(self) -> dict:
         as_dict = self.subtasks
         for key in as_dict.keys():
@@ -41,6 +51,7 @@ class Task():
                 as_dict[key] = as_dict[key].__dict__
 
         return as_dict
+    
     def load_fields_from_dict(self, fields_as_dict: dict):
         self.info = fields_as_dict['info']
         self.deadline = fields_as_dict['deadline']
@@ -49,6 +60,7 @@ class Task():
         for subtask in fields_as_dict['subtasks'].items():
             self.subtasks[subtask[0]] = Task("")
             self.subtasks[subtask[0]].load_fields_from_dict(subtask[1])
+    
 class ToDoList():
     def __init__(self, root, saving_file: str):
         self.root = root
@@ -98,6 +110,7 @@ class ToDoList():
         self.task_tree.heading("Status", text="Status", anchor=CENTER)
 
         self.load_saved_data()
+    
     def load_saved_data(self):
         with open(self.saving_file, 'r') as data_file:
            try:
@@ -116,6 +129,7 @@ class ToDoList():
                                                values=subtask.return_fields()[1:3])
            except Exception as e:
                self.task_dict = {}
+    
     def add_task(self):
         task_info = self.task_info_entry.get()
         task_deadline = self.date_entry.entry.get()
@@ -131,6 +145,7 @@ class ToDoList():
             self.task_info_entry.delete(0, tk.END)
         else:
             messagebox.showwarning("Warning", "Enter task information & deadline before submission")
+    
     def add_subtask(self):
         subtask_info = self.task_info_entry.get()
         subtask_deadline = self.date_entry.entry.get()
@@ -152,6 +167,7 @@ class ToDoList():
                 messagebox.showwarning("Warning", "Subtasks could not be added to this item")
         else:
             messagebox.showwarning("Warning", "Enter subtask information & deadline, select the parent task")
+    
     def complete_task(self):
         selected_id = self.task_tree.selection()
         if selected_id:
@@ -193,6 +209,7 @@ class ToDoList():
                 messagebox.showwarning("Warning", "Selected item has been already completed")
         else:
             messagebox.showwarning("Warning", "Select an item before completion")
+    
     def change_deadline(self):
         selected_id = self.task_tree.selection()
         if selected_id:
@@ -218,6 +235,7 @@ class ToDoList():
                     messagebox.showwarning("Warning", "Deadline could not be changed on this item")
         else:
             messagebox.showwarning("Warning", "Select an item to change deadline on")
+    
     def remove_task(self):
         selected_id = self.task_tree.selection()
         if selected_id:
@@ -231,12 +249,15 @@ class ToDoList():
             self.task_tree.delete(selected_id[0])
         else:
             messagebox.showwarning("Warning", "Select an item before removal")
+    
     def task_entry_clear_placeholder(self, event):
         if self.task_info_entry.get() == self.task_entry_comment:
             self.task_info_entry.delete(0, tk.END)
+    
     def task_entry_restore_placeholder(self, event):
         if self.task_info_entry.get() == "":
             self.task_info_entry.insert(0, self.task_entry_comment)
+    
     def return_as_dict(self) -> dict:
         as_dict = self.task_dict
         for key in as_dict.keys():
@@ -246,6 +267,7 @@ class ToDoList():
                 as_dict[key]["subtasks"] = subtasks_as_dict
 
         return as_dict
+    
     def save_data(self):
         with open(self.saving_file, "w") as file:
             data = json.dumps(self.return_as_dict())
